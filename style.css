@@ -1,0 +1,66 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #FFDAB9, #FFE4B5);
+}
+
+.container{
+    width: 1000px;
+    height: 655px;
+    background-image: url(bgImg.jpg);
+    margin: 20px auto;
+}
+
+.calc-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    position: relative;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calc-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(62, 86, 218, .75);
+}
+
+.calc-grid > button:hover{
+    background-color:  rgba(157, 168, 229, 0.90);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background: rgba(157, 168, 229, 0.75);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .prev-operand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .cur-operand{
+    color: white;
+    font-size: 2.5rem;
+}
