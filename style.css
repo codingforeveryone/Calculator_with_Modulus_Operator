@@ -7,14 +7,8 @@
 body{
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #FFDAB9, #FFE4B5);
-}
-
-.container{
-    width: 1000px;
-    height: 655px;
-    background-image: url(bgImg.jpg);
-    margin: 20px auto;
+    background: darkolivegreen;
+    
 }
 
 .calc-grid{
@@ -23,14 +17,15 @@ body{
     align-content: center;
     min-height: 100vh;
     position: relative;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: minmax(150px, auto) repeat(5, 150px);
 }
 
 .calc-grid > button{
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
+    border-radius: 15%;
     outline: none;
     background-color: rgba(62, 86, 218, .75);
 }
@@ -41,15 +36,18 @@ body{
 
 .span-two{
     grid-column: span 2;
+    
 }
 
 .output{
     grid-column: 1 / -1;
-    background: rgba(157, 168, 229, 0.75);
+    background: darkslategray;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
     flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5%;
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
